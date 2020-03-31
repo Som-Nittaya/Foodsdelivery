@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Food Delivery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/cafe-restaurant-logo-design-template-36687c31a16c5e4a27cad5fc058dcebb_screen.jpg?ts=1561470662" alt="">
+  <ion-card *ngFor="let tour of tours">
+    <img [src]="tour.image" alt="" (click)="goToPlaceDetail(tour.id)">
+    <ion-card-content>
+      <ion-card-title>{{tour.name}}</ion-card-title>
+      <p>{{tour.detail}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
